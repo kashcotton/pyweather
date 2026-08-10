@@ -1,94 +1,88 @@
-# PyWeather
-PyWeather is a free and open-source piece of software that utilizes the OpenWeatherMap API to fetch weather information based on user input.
-Now with a GUI! 
+<div align="center">
+  <h1>PyWeather</h1>
+  <p><b>A Material Design weather app with absolutely zero filter.</b></p>
 
-## Prerequisites  
-Python
+[![Framework](https://img.shields.io/badge/Framework-Flutter-02569B.svg?logo=flutter)](https://flutter.dev/)
+[![Web Stack](https://img.shields.io/badge/Web-HTML%20%7C%20CSS%20%7C%20JS-E34F26.svg)]()
+[![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20Web-3DDC84.svg?logo=android)]()
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+</div>
 
-Requests (1.0 CLI)
+## About PyWeather
 
-Folium, pyqtwebengine, pyqt5 (2.0 & Up CLI)
+Despite the name, PyWeather has moved past its Python roots. It is now a dual-experience project: a lightweight web application built in HTML, CSS, and JavaScript, alongside a native Android application built in Flutter.
 
-# Screenshots
-![image](https://github.com/colebolebole/openweather/assets/88512222/44244110-3167-4f31-afb2-5c7e022eab1c)
+The idea is simple. We wanted a weather app that provides highly accurate, real-time data and looks incredibly clean—using Google's Material Design principles—but delivers the forecast the way someone actually talks when they step outside and it's freezing. 
 
-![image](https://github.com/colebolebole/pyweather/assets/88512222/ff4a6020-4b6f-47da-894a-1451f0143c2a)
+By utilizing Flutter for the mobile build, the app is easier to maintain and provides a solid native experience on Android, while the web version keeps things accessible for anyone with a browser.
 
-![image](mobile.png)
+## Features
 
-![image](https://github.com/colebolebole/pyweather/assets/88512222/c0a0ac39-81db-4fa7-a9b2-a4b896725516)
+*   **Native Android App:** Compiled with Flutter for smooth performance on Android devices.
+*   **Web App:** A straightforward, accessible counterpart built with standard web technologies.
+*   **Material Design:** A clean UI that mirrors native Google applications, focusing on typography, layout, and dark mode support.
+*   **Unfiltered Forecasts:** Dynamically generates aggressive, profane, and honest weather descriptions based on the current temperature, precipitation, and wind conditions.
+*   **In-App Settings:** No need to configure `.env` files or API keys. All settings, including vulgarity levels, are managed directly through the app's user interface.
+*   **Open-Meteo Integration:** Global, accurate weather data provided by the Open-Meteo API.
 
+## Screenshots
 
-# Setup 1.0 - CLI
-First install requests
+| Clean Material UI | Vulgar Forecasts | Settings & Options |
+| :---: | :---: | :---: |
+| <img src="https://i.imgur.com/nDRYHaa.png?text=Material+UI" width="250"> | <img src="https://i.imgur.com/PvqoGKD.png?text=Vulgar+Weather+Alerts" width="250"> | <img src="https://i.imgur.com/CarI9wJ.png?text=In-App+Options" width="250"> |
 
-```python
-pip install requests
-```
----
-2.0 & Up
+## Installation & Setup
 
-```python
-pip install folium pyqtwebengine pyqt5
-```
----
-# CLI
-Then simply create a API key from this [link](https://home.openweathermap.org/api_keys).
+### Prerequisites
+*   [Flutter SDK](https://flutter.dev/docs/get-started/install) (if you intend to build or run the Android app).
+*   An Android device or emulator.
 
-Paste it in @ line 38
+### Running the Flutter (Android) App
 
-![image](https://github.com/colebolebole/openweather/assets/88512222/16d9d12e-ebfe-4892-b5a0-73ee1049b436)
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/kashcotton/pyweather.git
+    cd pyweather
+    ```
 
----
+2.  **Get dependencies:**
+    ```bash
+    flutter pub get
+    ```
 
-# CLI 2.0 & Up
+3.  **Run the application:**
+    Ensure your device or emulator is running, then execute:
+    ```bash
+    flutter run
+    ```
+    *Note: You can adjust the app's behavior and vulgarity levels in the settings menu once it is running.*
 
-Create a API key from [here](https://home.openweathermap.org/api_keys)
+### Running the Web App
 
-Paste @ line 12
+Navigate to the web directory in the repository and open the `index.html` file in your browser, or host the directory on your preferred web server.
 
-![image](https://github.com/colebolebole/pyweather/assets/88512222/20607d49-bbcc-47be-83f7-17122e5b5361)
+## Built With
 
----
+*   **[Flutter](https://flutter.dev/) & Dart:** Used for the native Android application shell.
+*   **HTML / CSS / JavaScript:** Used for the core web application logic and styling.
+*   **[Open-Meteo API](https://open-meteo.com/):** For fast, keyless weather data.
 
-# Mobile Version: GUI
+## Credits & Acknowledgements
 
-Create a API key from [here](https://home.openweathermap.org/api_keys)
+A massive thanks to **[colebolebole](https://github.com/colebolebole)** for creating the original Python and OpenWeatherMap iteration of this project. We worked on that version together, and this new Flutter/Web iteration was built directly on the foundation of that original concept. 
 
-Paste @ line 137
+## Contributing
 
-![Screenshot 2024-01-17 210218](https://github.com/colebolebole/pyweather/assets/88512222/6116657e-4467-4d72-a05c-785733c9ccb9)
+If you have ideas for new features, bug fixes, or just want to add some creative new insults to the weather generator, feel free to contribute. 
 
----
+1. Fork the project.
+2. Create your feature branch (`git checkout -b feature/NewFeature`).
+3. Commit your changes (`git commit -m 'Add a new feature'`).
+4. Push to the branch (`git push origin feature/NewFeature`).
+5. Open a Pull Request.
 
-# Desktop Version: GUI
+## License
 
-Create a API key from [here](https://home.openweathermap.org/api_keys)
+Distributed under the **Apache License 2.0**. See the `LICENSE` file for more information.
 
-Paste @ line 153
-
-![Screenshot 2024-01-17 210211](https://github.com/colebolebole/pyweather/assets/88512222/30702e7a-959c-428b-a986-bb371bdf790f)
-
----
-
-
-# Setup - GUI
-1. Choose Your Web Server:
-
-Flexibility: You have the freedom to use various web server clients, including SiPyWeb and nginx.
-nginx on Windows: If you're using nginx on Windows, simply download the zip file from the releases, extract it, and run nginx.exe. It's that easy!
-
-2. Start the Server:
-
-No extra steps: Once you've chosen your web server, just fire it up and you're ready to go.
-API Key:
-
-Free public key: A free public API key is conveniently pre-installed, so you can start using the service right away.
-Customization: If you prefer to use your own API key, you can easily create one at [openweathermap.org/appid](https://openweathermap.org/appid)
-That's it! With these simple steps, you'll be up and running in no time.
-
-# Don't want to use an API Key?
-Get a release that already has one!
-
-https://github.com/colebolebole/openweather/releases/tag/pyweather
-
+*Disclaimer: This app contains strong language and profanity by design.*
